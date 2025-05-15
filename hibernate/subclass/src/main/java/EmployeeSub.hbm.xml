@@ -1,0 +1,20 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.hibernate.table_per_class.EmployeeSub" table="EMPLOYEE_DETAILS">
+        <id name="rollNo" type="int">
+            <column name="rollno"/>
+            <generator class="increment"/>
+        </id>
+        <property name="name" column = "name"/>
+        <joined-subclass name = "Hourly_Employee_Sub" table = "Hourly_Employee_Sub">
+         <key column = "empno"/>
+        <property name = "max_hours_per_day" column = "max_hours_per_day"/>
+        </joined-subclass>
+        <joined-subclass name = "Slaried_Employee_Sub" table = "Salaried_Employee_Sub">
+         <key column = "empno"/>
+        <property name = "annual_salary" column = "annual_salary"/>
+        </joined-subclass>
+    </class>
+</hibernate-mapping>

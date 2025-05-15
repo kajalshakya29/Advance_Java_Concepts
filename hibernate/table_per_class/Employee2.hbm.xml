@@ -1,0 +1,22 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.hibernate.table_per_class.Employee2" table="EMPLOYEE_DETAILS">
+        <id name="rollNo" type="int">
+            <column name="rollno"/>
+            <generator class="increment"/>
+        </id>
+        <discriminator column="type" type="string"/>
+        <property name="name" column="name" type="string"/>
+        
+        <subclass name="com.hibernate.table_per_class.Hourly_Employee" discriminator-value="hourly">
+            <property name="max_hours_per_day" column="max_hours_per_day" type="int"/>
+            <property name="hourly_rate" column="hourly_rate" type="double"/>
+        </subclass>
+
+        <subclass name="com.hibernate.table_per_class.Salaried_Employee" discriminator-value="salaried">
+            <property name="annual_salary" column="annual_salary" type="double"/>
+        </subclass>
+    </class>
+</hibernate-mapping>
