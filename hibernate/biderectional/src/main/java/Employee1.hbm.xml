@@ -1,0 +1,21 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<?xml-model type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+   <hibernate-mapping>
+       <class name = "com.hibernate.biderectional.Employee1" table = "Employee2">
+         <id name = "empNo" >
+           <generator class = "increment"/>
+         </id>
+         <property name = "ename" column="ename1"/>
+         <property name = "salary" column="salary"/>
+         <component name = "address" class="com.hibernate.biderectional.Address1">
+           <property name = "number" column ="address_number" />
+            <property name = "city" column="address_city" />
+             <property name = "state" column="address_state" />
+              <property name = "country" column="address_country" />
+         </component>
+       </class>
+      
+   </hibernate-mapping>
