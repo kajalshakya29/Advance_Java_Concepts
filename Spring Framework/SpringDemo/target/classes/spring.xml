@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+                   
+                   
+                   <!-- by using XML file -->    
+                       
+<!--  <bean id="vehicle" class="com.Spring.Demo.SpringDemo.Bike"></bean>-->
+
+
+      <!-- by using annotation based programming -->
+<context:component-scan base-package="com.Spring.Demo.SpringDemo"></context:component-scan>
+
+<!--bean id="tyre" class="com.Spring.Demo.SpringDemo.Tyre"-->
+	<!--<property name="brand" value="ceat"></property>-->
+	
+	 <!-- by using constructor injection programming -->
+	<!--constructor-arg value="MRF"></constructor-arg-->
+	
+
+
+</beans>
