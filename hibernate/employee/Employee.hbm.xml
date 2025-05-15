@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+   <?xml-model type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+    <hibernate-mapping>
+    
+       <class name="com.hibernate.employee.Employee" table = "Employee_Table"/>
+         <id name="EmpId" column = "Eid"/>
+         <property name="EmpName" column="Ename"/>
+         <property name="EmpCity" column="Ecity"/>
+       </class>
+    </hibernate-mapping>
