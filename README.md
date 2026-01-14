@@ -1,4 +1,4 @@
-Advance Java Concepts
+Advance Java Concepts 
 
 This repository demonstrates important Advanced Java concepts, especially JDBC and Hibernate, with hands-on examples. Each module is designed to help understand how Java interacts with databases and performs real-world operations.
 
