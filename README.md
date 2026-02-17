@@ -1,8 +1,8 @@
-Advance Java Concepts 
+# Advance Java Concepts 
 
 This repository demonstrates important Advanced Java concepts, especially JDBC and Hibernate, with hands-on examples. Each module is designed to help understand how Java interacts with databases and performs real-world operations.
 
-📂 Modules
+## 📂 Modules
 
 JDBC Examples (MyDatabase)
 Learn how to establish a database connection using JDBC, execute queries, and manage data between Java applications and relational databases.
@@ -16,7 +16,7 @@ Examples showing how cursors work in Hibernate and how to fetch records efficien
 Image Handling (ReadImage)
 Demonstrates storing and retrieving image files in the database using Java, an essential feature for multimedia-based applications.
 
-📝 Topics Covered
+## 📝 Topics Covered
 
 JDBC connection setup and query execution
 
